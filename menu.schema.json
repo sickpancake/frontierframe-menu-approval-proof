@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["name", "priceCents", "opens", "closes"],
+  "properties": {
+    "name": { "type": "string", "pattern": "[\\s\\S]" },
+    "priceCents": { "type": "integer", "minimum": 0 },
+    "opens": { "type": "string", "pattern": "^(?:[01][0-9]|2[0-3]):[0-5][0-9]$" },
+    "closes": { "type": "string", "pattern": "^(?:[01][0-9]|2[0-3]):[0-5][0-9]$" }
+  }
+}
